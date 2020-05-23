@@ -89,23 +89,36 @@
                             </div><!--//item-->
                             <hr class="divider" />
                             <div class="item row">
-                                <a class="col-md-4 col-12" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" alt="project name" />
+                                <a class="col-md-4 col-12" target="_blank">
+                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" id="myImg" alt="ParanPY" />
                                 </a>
+                                <!-- The Modal -->
+                                 <div id="myModal" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="img01">
+                                    <div id="caption"></div>
+                                </div>
                                 <div class="desc col-md-8 col-12">
                                     <h3 class="title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank">ParanPY - 원격 취약점 진단 솔루션</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
+                                    <p class="mb-2">KISA-정보통신기반시설 취약점 진단 가이드를 기반으로 리눅스/윈도우 환경을 지원하는 서버 - 에이전트 구조의 원격 취약점 진단 솔루션이다.</p>
                                     <p><a class="more-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
                                 </div><!--//desc-->                          
                             </div><!--//item-->
                             
                             <div class="item row">
-                                <a class="col-md-4 col-12" href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank">
-                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-2.png" alt="project name" />
+                                <a class="col-md-4 col-12" target="_blank">
+                                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-2.png" id="myImg2" alt="Artifacts Collector" />
                                 </a>
+                                <!-- The Modal -->
+                                <div id="myModal2" class="modal">
+                                    <span class="close">&times;</span>
+                                    <img class="modal-content" id="img02">
+                                    <div id="caption2"></div>
+                                </div>
+
                                 <div class="desc col-md-8 col-12">
                                     <h3 class="title"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank">Artifacts Collector - 디지털 포렌식을 활용한 침해사고 증거 수집</a></h3>
-                                    <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante dolor non turpis.</p>
+                                    <p class="mb-2">침해사고 조사 시 정보 수집 과정을 GUI가 아닌 CLI를 통해 윈도 아티펙트를 수집하고 데이터를 연관 지어 분석가에게 제공해준다.</p>
                                     <p><a class="more-link" href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
                                 </div><!--//desc-->                          
                             </div><!--//item-->
@@ -446,7 +459,51 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
+    <script type="text/javascript" src="assets/js/main.js"></script>
+  
+    <script> // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+    </script>
+
+    <script>
+    // Get the modal
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img2 = document.getElementById("myImg2");
+    var modalImg2 = document.getElementById("img02");
+    var captionText2 = document.getElementById("caption2");
+
+    img2.onclick = function(){
+        modal2.style.display = "block";
+        modalImg2.src = this.src;
+        captionText2.innerHTML = this.alt;
+        }
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[1];
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() { 
+        modal2.style.display = "none";
+    }
+    </script>
 </body>
 </html> 
 
