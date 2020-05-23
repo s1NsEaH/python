@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
     $("#rss-feeds").rss(
     
         //Change this to your own rss feeds
-        "https://feeds.feedburner.com/TechCrunch/startups",
+        "https://trac-doskey.tistory.com/rss",
         
         {
         // how many entries do you want?

@@ -706,7 +706,7 @@ a.dotted-link:hover {
 }
 
 /* Caption of Modal Image */
-#caption {
+#caption, #caption2 {
   margin: auto;
   display: block;
   width: 80%;
@@ -718,7 +718,7 @@ a.dotted-link:hover {
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content, #caption, #caption2 {  
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
